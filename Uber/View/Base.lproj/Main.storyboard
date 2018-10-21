@@ -104,10 +104,78 @@
                         <outlet property="riderDriverSwitch" destination="7pz-c2-0KP" id="wHV-vL-twA"/>
                         <outlet property="riderLabel" destination="R5e-zd-RCF" id="QIk-3R-oi2"/>
                         <outlet property="signUpButton" destination="2Lj-V4-Acn" id="mAq-5F-Xkk"/>
+                        <segue destination="Dws-LC-MSo" kind="presentation" identifier="riderSegue" id="1xK-vp-Yls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="103" y="132"/>
+        </scene>
+        <!--Rider View Controller-->
+        <scene sceneID="eh2-Ck-Sjn">
+            <objects>
+                <viewController id="ceO-IF-L1H" customClass="RiderViewController" customModule="Uber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpW-a7-EdK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vcJ-9u-0eL">
+                                <rect key="frame" x="20" y="84" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vcJ-9u-0eL" secondAttribute="height" multiplier="1:1" id="65R-Ym-0yd"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hj-nG-mhf">
+                                <rect key="frame" x="145.5" y="427" width="84" height="30"/>
+                                <state key="normal" title="Call an Uber"/>
+                                <connections>
+                                    <action selector="callUberTapped:" destination="ceO-IF-L1H" eventType="touchUpInside" id="KcD-c8-ytL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vcJ-9u-0eL" firstAttribute="top" secondItem="opJ-Oo-cwG" secondAttribute="top" constant="20" id="G2Z-Tl-rAa"/>
+                            <constraint firstItem="9hj-nG-mhf" firstAttribute="centerX" secondItem="cpW-a7-EdK" secondAttribute="centerX" id="G3l-NN-hkF"/>
+                            <constraint firstItem="opJ-Oo-cwG" firstAttribute="trailing" secondItem="vcJ-9u-0eL" secondAttribute="trailing" constant="20" id="ntE-zF-ety"/>
+                            <constraint firstItem="vcJ-9u-0eL" firstAttribute="leading" secondItem="opJ-Oo-cwG" secondAttribute="leading" constant="20" id="qoY-q4-Cy2"/>
+                            <constraint firstItem="9hj-nG-mhf" firstAttribute="top" secondItem="vcJ-9u-0eL" secondAttribute="bottom" constant="8" id="wV6-at-BKq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="opJ-Oo-cwG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aOy-11-elF">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="x0w-cf-OqB">
+                            <connections>
+                                <action selector="logoutTapped:" destination="ceO-IF-L1H" id="xGd-6w-gxe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="callAnUberButton" destination="9hj-nG-mhf" id="sli-6e-Tif"/>
+                        <outlet property="map" destination="vcJ-9u-0eL" id="EgJ-gJ-RDF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N5D-Gp-D1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mlq-LX-m1h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dws-LC-MSo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Acd-4U-lcG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ceO-IF-L1H" kind="relationship" relationship="rootViewController" id="kh9-sy-4ex"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lI-Bt-45K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842.39999999999998" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>

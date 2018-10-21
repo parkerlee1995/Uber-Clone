@@ -40,6 +40,7 @@ class ViewController: UIViewController {
                                 self.displayAlert(title: "Error", message: error!.localizedDescription)
                             } else {
                                 print("Sign Up successful!")
+                                self.performSegue(withIdentifier: "riderSegue", sender: nil)
                             }
                         }
                     } else {
@@ -49,6 +50,7 @@ class ViewController: UIViewController {
                                 self.displayAlert(title: "Error", message: error!.localizedDescription)
                             } else {
                                 print("Log In successful!")
+                                self.performSegue(withIdentifier: "riderSegue", sender: nil)
                             }
                         }
                     }

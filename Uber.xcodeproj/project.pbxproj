@@ -14,6 +14,7 @@
 		CA3EC00F217B9E0F0007FCF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3EC00E217B9E0F0007FCF0 /* Assets.xcassets */; };
 		CA3EC012217B9E0F0007FCF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3EC010217B9E0F0007FCF0 /* LaunchScreen.storyboard */; };
 		CA3EC01A217B9F630007FCF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3EC019217B9F620007FCF0 /* GoogleService-Info.plist */; };
+		CA7A84AF217D403900FBF0DB /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7A84AE217D403900FBF0DB /* RiderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CA3EC011217B9E0F0007FCF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA3EC013217B9E0F0007FCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3EC019217B9F620007FCF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA7A84AE217D403900FBF0DB /* RiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderViewController.swift; sourceTree = "<group>"; };
 		E9D7F25B9073F65DFDFF297E /* Pods-Uber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uber/Pods-Uber.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA2632554B1DF1CFECD31AC /* Pods-Uber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uber/Pods-Uber.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,14 +83,31 @@
 			isa = PBXGroup;
 			children = (
 				CA3EC007217B9E0D0007FCF0 /* AppDelegate.swift */,
-				CA3EC009217B9E0D0007FCF0 /* ViewController.swift */,
-				CA3EC00B217B9E0D0007FCF0 /* Main.storyboard */,
+				CA7A84B1217D405200FBF0DB /* Controller */,
+				CA7A84B0217D404300FBF0DB /* View */,
 				CA3EC00E217B9E0F0007FCF0 /* Assets.xcassets */,
 				CA3EC010217B9E0F0007FCF0 /* LaunchScreen.storyboard */,
 				CA3EC013217B9E0F0007FCF0 /* Info.plist */,
 				CA3EC019217B9F620007FCF0 /* GoogleService-Info.plist */,
 			);
 			path = Uber;
+			sourceTree = "<group>";
+		};
+		CA7A84B0217D404300FBF0DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA3EC00B217B9E0D0007FCF0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA7A84B1217D405200FBF0DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA3EC009217B9E0D0007FCF0 /* ViewController.swift */,
+				CA7A84AE217D403900FBF0DB /* RiderViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,12 +189,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Uber/Pods-Uber-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3EC00A217B9E0D0007FCF0 /* ViewController.swift in Sources */,
+				CA7A84AF217D403900FBF0DB /* RiderViewController.swift in Sources */,
 				CA3EC008217B9E0D0007FCF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
