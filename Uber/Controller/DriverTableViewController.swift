@@ -73,7 +73,30 @@ class DriverTableViewController: UITableViewController, CLLocationManagerDelegat
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "acceptRequestSegue", sender: nil)
+        let snapshot = rideRequest[indexPath.row]
+        performSegue(withIdentifier: "acceptRequestSegue", sender: snapshot)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let acceptVC = segue.destination as? AcceptRequestViewController {
+            
+            if let snapshot = sender as? DataSnapshot {
+                if let rideRequestDictionary = snapshot.value as? [String: Any] {
+                    if let email = rideRequestDictionary["email"] as? String {
+                        if let lat = rideRequestDictionary["lat"] as? Double {
+                            if let lon = rideRequestDictionary["lon"] as? Double {
+                                
+                                acceptVC.requestEmail = email
+                                let location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                                acceptVC.requestLocation = location
+                                acceptVC.driverLocation = driverLocation
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
