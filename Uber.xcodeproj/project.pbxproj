@@ -15,6 +15,8 @@
 		CA3EC012217B9E0F0007FCF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3EC010217B9E0F0007FCF0 /* LaunchScreen.storyboard */; };
 		CA3EC01A217B9F630007FCF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3EC019217B9F620007FCF0 /* GoogleService-Info.plist */; };
 		CA7A84AF217D403900FBF0DB /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7A84AE217D403900FBF0DB /* RiderViewController.swift */; };
+		CAE28E8A217F615000E6D1FF /* DriverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE28E89217F615000E6D1FF /* DriverTableViewController.swift */; };
+		CAE28E8C217F6A0800E6D1FF /* AcceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE28E8B217F6A0800E6D1FF /* AcceptRequestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CA3EC013217B9E0F0007FCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3EC019217B9F620007FCF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA7A84AE217D403900FBF0DB /* RiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderViewController.swift; sourceTree = "<group>"; };
+		CAE28E89217F615000E6D1FF /* DriverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewController.swift; sourceTree = "<group>"; };
+		CAE28E8B217F6A0800E6D1FF /* AcceptRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequestViewController.swift; sourceTree = "<group>"; };
 		E9D7F25B9073F65DFDFF297E /* Pods-Uber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uber/Pods-Uber.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA2632554B1DF1CFECD31AC /* Pods-Uber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uber/Pods-Uber.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +110,8 @@
 			children = (
 				CA3EC009217B9E0D0007FCF0 /* ViewController.swift */,
 				CA7A84AE217D403900FBF0DB /* RiderViewController.swift */,
+				CAE28E89217F615000E6D1FF /* DriverTableViewController.swift */,
+				CAE28E8B217F6A0800E6D1FF /* AcceptRequestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -230,8 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3EC00A217B9E0D0007FCF0 /* ViewController.swift in Sources */,
+				CAE28E8A217F615000E6D1FF /* DriverTableViewController.swift in Sources */,
 				CA7A84AF217D403900FBF0DB /* RiderViewController.swift in Sources */,
 				CA3EC008217B9E0D0007FCF0 /* AppDelegate.swift in Sources */,
+				CAE28E8C217F6A0800E6D1FF /* AcceptRequestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

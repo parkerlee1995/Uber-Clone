@@ -16,9 +16,9 @@ class RiderViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var callAnUberButton: UIButton!
     
-    private var locationManager = CLLocationManager()
-    private var userLocation = CLLocationCoordinate2D()
-    private var uberHasBeenCalled: Bool = false
+    var locationManager = CLLocationManager()
+    var userLocation = CLLocationCoordinate2D()
+    var uberHasBeenCalled: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
